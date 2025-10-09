@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import Auth
-admin.site.register(Auth)
+from categorias.models import Categoria
 
-
-# Register your models here.
-
-
+@admin.register(Categoria)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('nombre_Categoria', 'slug', 'descripcion')
+    prepopulated_fields = {'slug': ('nombre_Categoria',)}
+    search_fields = ('nombre_Categoria', 'descripcion')
+    
+    
