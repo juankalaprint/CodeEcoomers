@@ -30,6 +30,7 @@ from django.conf.urls.static import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.inicio, name='inicio'),
+    path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 STATIC_URL = '/static/'
 STATIC_ROOT =  BASE_DIR / 'staticfiles'
