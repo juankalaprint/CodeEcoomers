@@ -32,4 +32,4 @@ urlpatterns = [
     path('', views.inicio, name='inicio'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 STATIC_URL = '/static/'
-STATIC_ROOT =  BASE_DIR / 'staticfiles' 
+STATIC_ROOT =  BASE_DIR / 'staticfiles'
